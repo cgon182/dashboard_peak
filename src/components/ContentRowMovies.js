@@ -22,7 +22,7 @@ function ContentRowMovies() {
             });
 
         // Fetch para el total de usuarios
-        fetch('')
+        fetch('') // AQUÍ DEBERÍAS ESPECIFICAR LA URL PARA OBTENER EL TOTAL DE USUARIOS
             .then(response => response.json())
             .then(data => {
                 setTotalUsers(data.totalUsers);
@@ -32,10 +32,14 @@ function ContentRowMovies() {
             });
 
         // Fetch para la cantidad de categorías
-        fetch('')
+        fetch('http://localhost:3000/api/count-categories')
             .then(response => response.json())
             .then(data => {
-                setTotalCategories(data.totalCategories);
+                if (data.hasOwnProperty('count')) {
+                    setTotalCategories(data.count);
+                } else {
+                    console.error('La respuesta no contiene el recuento de categorías');
+                }
             })
             .catch(error => {
                 console.error('Error al obtener la cantidad de categorías:', error);
@@ -50,13 +54,13 @@ function ContentRowMovies() {
             icon: 'fa-clipboard-list'
         },
         {
-            title: 'Total awards',
+            title: 'Total de usuarios',
             color: 'success',
             quantity: totalUsers,
             icon: 'fa-award'
         },
         {
-            title: 'Actors quantity',
+            title: 'Total de categorías',
             color: 'warning',
             quantity: totalCategories,
             icon: 'fa-user-check'

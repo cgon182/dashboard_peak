@@ -10920,7 +10920,8 @@ a:focus {
 }
 
 .border-left-primary {
-    border-left: .25rem solid #4e73df !important
+    border-left: .25rem solid #4e73df !important;
+    background: black;
 }
 
 .border-bottom-primary {
