@@ -6,7 +6,7 @@ function SmallCard(props){
 
     useEffect(() => {
         setQuantity(props.quantity);  
-    }, [props.quantity]);  
+    }, [props.quantity]); 
 
     return(
         <div className="col-md-4 mb-4">
@@ -15,10 +15,10 @@ function SmallCard(props){
                     <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                             <div className={`text-xs font-weight-bold text-${props.color} text-uppercase mb-1`}>{props.title}</div>
-                            <div className="h5 mb-0 font-weight-bold text-gray-800">{quantity}</div> {/* Usar la cantidad del estado */}
+                            <div className="h5 mb-0 font-weight-bold" style={{ color: props.quantityColor }}>{quantity}</div>
                         </div>
                         <div className="col-auto">
-                            <i className={`fas ${props.icon} fa-2x text-gray-300`}></i>
+                            <i className={`fas ${props.icon} fa-2x`} style={{ color: props.iconColor }}></i>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ function SmallCard(props){
 /* DEFINICIÓN DE PROPIEDADES POR DEFAULT */
 
 SmallCard.defaultProps = {
-    title: 'No Title',
+    title: 'Sin título',
     color: 'success',
     icon: 'fa-clipboard-list'
 }

@@ -22,7 +22,7 @@ function ContentRowMovies() {
             });
 
         // Fetch para el total de usuarios
-        fetch('') // AQUÍ DEBERÍAS ESPECIFICAR LA URL PARA OBTENER EL TOTAL DE USUARIOS
+        fetch('') // AQUÍ DEBERÍA ESPECIFICAR LA URL PARA OBTENER EL TOTAL DE USUARIOS
             .then(response => response.json())
             .then(data => {
                 setTotalUsers(data.totalUsers);
@@ -51,19 +51,25 @@ function ContentRowMovies() {
             title: 'Total de productos',
             color: 'primary',
             quantity: totalProducts,
-            icon: 'fa-clipboard-list'
+            icon: 'fa-solid fa-dolly', 
+            iconColor: '#efc84c',
+            quantityColor: 'white',
         },
         {
             title: 'Total de usuarios',
             color: 'success',
             quantity: totalUsers,
-            icon: 'fa-award'
+            icon: 'fa-solid fa-users', 
+            iconColor: '#00b8a7',
+            quantityColor: 'white'
         },
         {
             title: 'Total de categorías',
             color: 'warning',
             quantity: totalCategories,
-            icon: 'fa-user-check'
+            icon: 'fa-solid fa-list',
+            iconColor: '#d83f1f',
+            quantityColor: 'white',
         }
     ];
 
