@@ -87,6 +87,25 @@ hr {
     overflow: visible
 }
 
+.admin-features {
+    display: inline-block;
+    border-radius: 8px;
+    background-color: rgb(228, 228, 228);
+    margin-right: 16px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none; 
+    padding: 10px 20px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.admin-features:hover {
+    background-color: black;
+    color: #efc84c;
+    text-decoration: none;
+}
+
+
 h1,
 h2,
 h3,
@@ -1622,7 +1641,6 @@ pre code {
 .table {
     width: 100%;
     margin-bottom: 1rem;
-    color: #858796
 }
 
 .table td,
@@ -1632,9 +1650,14 @@ pre code {
     border-top: 1px solid #e3e6f0
 }
 
+.table th {
+    color: #efc84c
+}
+
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #e3e6f0
+    border-bottom: 2px solid #000000;
+    background-color: black
 }
 
 .table tbody+tbody {
@@ -1652,7 +1675,7 @@ pre code {
 
 .table-bordered td,
 .table-bordered th {
-    border: 1px solid #e3e6f0
+    border: 1px solid #232323
 }
 
 .table-bordered thead td,
@@ -6805,7 +6828,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: #5a5c69 !important
+    background-color: #2c2c2d !important
 }
 
 a.bg-dark:focus,
@@ -7279,7 +7302,7 @@ button.bg-dark:hover {
 }
 
 .justify-content-between {
-    justify-content: space-between !important
+    justify-content: flex-start
 }
 
 .justify-content-around {
@@ -10903,7 +10926,8 @@ a:focus {
 }
 
 .text-gray-800 {
-    color: #5a5c69 
+    color: #5a5c69 ;
+    margin-right: 24px
 }
 
 .text-gray-900 {
