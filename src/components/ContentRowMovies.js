@@ -1,50 +1,85 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SmallCard from './SmallCard';
 
-/*  Cada set de datos es un objeto literal */
+function ContentRowMovies() {
+    const [totalProducts, setTotalProducts] = useState(0);
+    const [totalUsers, setTotalUsers] = useState('No hay registros');
+    const [totalCategories, setTotalCategories] = useState('No hay registros');
 
-/* <!-- Movies in DB --> */
+    useEffect(() => {
+        // Fetch para el total de productos
+        fetch('http://localhost:3000/api/product-count')
+            .then(response => response.json())
+            .then(data => {
+                if (data.hasOwnProperty('count')) {
+                    setTotalProducts(data.count);
+                } else {
+                    console.error('La respuesta no contiene el recuento de productos');
+                }
+            })
+            .catch(error => {
+                console.error('Error al obtener el recuento de productos:', error);
+            });
 
-let moviesInDB = {
-    title: 'Movies in Data Base',
-    color: 'primary', 
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
-}
+        // Fetch para el total de usuarios
+        fetch('') // AQUÍ DEBERÍA ESPECIFICAR LA URL PARA OBTENER EL TOTAL DE USUARIOS
+            .then(response => response.json())
+            .then(data => {
+                setTotalUsers(data.totalUsers);
+            })
+            .catch(error => {
+                console.error('Error al obtener el total de usuarios:', error);
+            });
 
-/* <!-- Total awards --> */
+        // Fetch para la cantidad de categorías
+        fetch('http://localhost:3000/api/count-categories')
+            .then(response => response.json())
+            .then(data => {
+                if (data.hasOwnProperty('count')) {
+                    setTotalCategories(data.count);
+                } else {
+                    console.error('La respuesta no contiene el recuento de categorías');
+                }
+            })
+            .catch(error => {
+                console.error('Error al obtener la cantidad de categorías:', error);
+            });
+    }, []);
 
-let totalAwards = {
-    title:' Total awards', 
-    color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
-}
+    const cartProps = [
+        {
+            title: 'Total de productos',
+            color: 'primary',
+            quantity: totalProducts,
+            icon: 'fa-solid fa-dolly', 
+            iconColor: '#efc84c',
+            quantityColor: 'white',
+        },
+        {
+            title: 'Total de usuarios',
+            color: 'success',
+            quantity: totalUsers,
+            icon: 'fa-solid fa-users', 
+            iconColor: '#00b8a7',
+            quantityColor: 'white'
+        },
+        {
+            title: 'Total de categorías',
+            color: 'warning',
+            quantity: totalCategories,
+            icon: 'fa-solid fa-list',
+            iconColor: '#d83f1f',
+            quantityColor: 'white',
+        }
+    ];
 
-/* <!-- Actors quantity --> */
-
-let actorsQuantity = {
-    title:'Actors quantity' ,
-    color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
-}
-
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
-
-function ContentRowMovies(){
     return (
-    
         <div className="row">
-            
-            {cartProps.map( (movie, i) => {
-
-                return <SmallCard {...movie} key={i}/>
-            
-            })}
-
+            {cartProps.map((movie, i) => (
+                <SmallCard {...movie} key={i} />
+            ))}
         </div>
-    )
+    );
 }
 
 export default ContentRowMovies;

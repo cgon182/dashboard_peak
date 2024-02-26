@@ -1,64 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ChartRow from './ChartRow';
 
-let tableRowsData = [
-    {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
-        Categories: ['Drama','Comedia'],
-        Awards: 2
-    },
-    {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
-    },
-    
-]
+function Chart() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/products') // Endpoint para obtener todos los productos
+      .then(response => response.json())
+      .then(data => {
+        setProducts(data.products); // Actualiza el estado con los datos de los productos
+      })
+      .catch(error => console.error('Error al obtener los productos:', error));
+  }, []); 
 
 
-function Chart (){
-    return (
-        /* <!-- DataTales Example --> */
-        <div className="card shadow mb-4">
-            <div className="card-body">
-                <div className="table-responsive">
-                    <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
-                        <thead>
-                            <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            {
-                            tableRowsData.map( ( row , i) => {
-                                return <ChartRow { ...row} key={i}/>
-                            })
-                            }
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+  return (
+    /* <!-- DataTales Example --> */
+    <div className="card shadow mb-4">
+      <div className="card-body">
+        <div className="table-responsive">
+          <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
+            <thead>
+              <tr>
+                <th>Cod</th>
+                <th>Categoría</th>
+                <th>Descripción</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products.map((product, index) => (
+                <ChartRow {...product} key={index} />
+              ))}
+            </tbody>
+          </table>
         </div>
-
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Chart;
