@@ -22,10 +22,10 @@ function ContentRowMovies() {
             });
 
         // Fetch para el total de usuarios
-        fetch('') // AQUÍ DEBERÍA ESPECIFICAR LA URL PARA OBTENER EL TOTAL DE USUARIOS
+        fetch('http://localhost:3000/api/users/count/users') 
             .then(response => response.json())
             .then(data => {
-                setTotalUsers(data.totalUsers);
+                setTotalUsers(data.count);
             })
             .catch(error => {
                 console.error('Error al obtener el total de usuarios:', error);
