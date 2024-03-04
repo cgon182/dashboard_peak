@@ -35,30 +35,11 @@ function SideBar(){
 
 
 
-                {/*<!-- Nav Item - Pages -->*/}
-                <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Páginas</span>
-                    </Link>
-                </li>
+             
 
-                {/*<!-- Nav Item - Charts -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Cuadros</span></Link>
-                </li>
-
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowMovies">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Tablas</span></Link>
-                </li>
 
                 {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider d-none d-md-block"/>
+
             </ul>
             {/*<!-- End of Sidebar -->*/}
 
