@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Bienvenido/a a nuestra tienda de Senderismo y Montaña (PEAK)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En nuestra tienda, ofrecemos una amplia gama de productos y servicios diseñados para los amantes del senderismo, la montaña y las actividades al aire libre. Nos enorgullece brindar a nuestros clientes productos de alta calidad y equipos confiables para que puedan disfrutar al máximo de sus aventuras en la naturaleza.
 
-## Available Scripts
+Este es un dashboard creado para el administrador de nuestro sitio. 
 
-In the project directory, you can run:
+# Nuestro repositorio principal: https://github.com/Juancho022/Grupo_2_senderismo_montania 
 
-### `npm start`
+## Nosotros
+*Rocio Martinez:* Hola soy Rocío, me gusta que me digan Ro, actualmente vivo en Rafaela, Santa Fe. Pero siempre viví en los pueblos cercanos a Rafaela. Disfruto de la naturaleza, me gusta tocar la guitarra como hobby, ir a recitales y hacer escapadas con mis amigos a conocer distintos lugares, amo viajar. Me apasiona todo lo de desarrollo desde que empecé a investigar un poco y este año comencé la tecnicatura en programación en la universidad UTN de Rafaela.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*Juan Manuel Francesconi:* ¡Hola! Me llamo Juan, tengo 23 años y soy de Rafaela, Santa Fe. Estudio una tecnicatura en Programacion en la UTN, trabajo en la panaderia de mi familia, si les gustan los Pan Dulce o Pan del Cielo en las fiestas seguramente nos conozcan, es Colsani. Me gusta mucho tocar la guitarra, el basquet (mido 2 metros) y los videojuegos. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+*Josefina Eberhardt:* ¡Hola! Soy Josefina, tengo 25 años. Vivo en Rafaela, Santa Fe. Soy una persona muy familiera, me gusta mucho viajar y disfruto cocinar para mi familia. Mi actividad favorita en la vida es jugar con mi hija, quien es mi mayor motivación. Hace un tiempito que vengo adentrandome en el mundo de la programación, lo encuentro divertido y desafiante. 
 
-### `npm test`
+*Matias Leglise:* ¡Hola! Mi nombre es Mati, tengo 30 años, soy de Coronel Brandsen, provincia de Buenos Aires, aunque ya hace 5 años que me mude por trabajo a la hermosa ciudad de La Plata, lugar donde naci (o ciudad e las diagonales como le llaman algunos) ya que empece a trabajar en Sancor Salud. Tengo 6 hermanos y unos cuantos sobrinos. Si bien tuve trabajos muy variados y soy estudiante avanzado de la carrera de Derecho, me considero un "geek" lo que segun google es "persona fascinada por la tecnología y la informática", todo lo que tenga que ver con formatear, armar, desarmar casi cada dispositivo que pasaba por mis manos, nunca se me paso por la cabeza la programacion porque lo asimilaba a algo con una complejidad mayor a mi entendimiento lo cual hoy cambio, ya que pasa de ser un imposible a una meta. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Camila Gon:* Buenas! Vivo en Rafaela, Santa Fe pero nací en Humberto I. Soy de julio del '93, fan de los michis, isfruto de jugar a los videojuegos (sobre todo los de survival horror). Soy Licenciada en Comunicación Social, estudié un año y medio de diseño UX/UI y actualmente también estoy en cuarto año de Inglés. Disfruto estar (y aprendo todos los días) de mis hermanos Alan y Alexis y de mi novio Lucas, a quienes, junto a mi mamá, les debo mucho de mis progresos. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Andrea Toledo:* ¡Hola! Soy Andrea y resido en San Miguel de Tucumán, Tucumán. Durante más de una década, me desempeñé como Técnica en Higiene y Seguridad Laboral. Sin embargo, tomé la decisión de emprender un nuevo camino en el mundo IT. Recientemente, completé un curso de Testing QA Manual y ahora estoy embarcada en esta emocionante aventura, con el apoyo incondicional de mi novio y mis padres.

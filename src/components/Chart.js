@@ -13,9 +13,7 @@ function Chart() {
       .catch(error => console.error('Error al obtener los productos:', error));
   }, []); 
 
-
   return (
-    /* <!-- DataTales Example --> */  
     <div className="card shadow mb-4">
       <div className="card-body">
       <h4>Listado total de productos</h4>
@@ -27,12 +25,19 @@ function Chart() {
                 <th>Categoría</th>
                 <th>Descripción</th>
                 <th>Nombre</th>
-                <th>Precio</th>
+                {/* <th>Precio</th> */}
               </tr>
             </thead>
             <tbody>
-              {products.map((product, index) => (
-                <ChartRow {...product} key={index} />
+              {products.map(product => (
+                <ChartRow
+                  key={product.id}
+                  id={product.id}
+                  category={product.category.description}
+                  description={product.description}
+                  name={product.name}
+                  price={product.prices}
+                />
               ))}
             </tbody>
           </table>
@@ -43,3 +48,4 @@ function Chart() {
 }
 
 export default Chart;
+
